@@ -12,7 +12,8 @@ This extension helps backend developers redirect API requests from a live fronte
    - **To URL**: Your local server URL (e.g., `http://localhost:3000/api/users`).
    - **Method**: Choose the HTTP method (GET, POST, etc.).
 3. Click **Add Redirect**.
-4. Done! Now requests to the "From URL" will be redirected to your "To URL."
+4. Use Toggle buttons to control Extension and APIs. 
+5. When apis are being redirect to local server you will see blue popup message at right bottom corner.
 
 ---
 
@@ -62,5 +63,7 @@ You can redirect **multiple APIs** with a single pattern.
 
 ## Troubleshooting Tips
 - Make sure your **local server is running** and accessible.
-- Verify that the **From URL** , **To URL** , **Method**are correctly configured.
+- Verify that the **From URL** , **To URL** , **Method** are correctly configured.
 - Use **Developer Tools → Network Tab** in your browser to check if requests are redirected properly.
+
+**Email me at svfodekar@gmail.com if need help with how to use extension** 
