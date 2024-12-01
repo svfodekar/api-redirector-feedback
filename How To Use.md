@@ -46,7 +46,7 @@ You can redirect **multiple APIs** with a single pattern.
 | **Live URL (From)**                              | **Local URL (To)**                          | **Method** |
 |--------------------------------------------------|---------------------------------------------|------------|
 | `GET https://live-api.com/api/#`                 | `GET http://localhost:3000/api/#`           | GET        |
-| `POST https://live-api.com/#/submit`             | `POST http://localhost:3000/#/submit`       | POST       |
+| `POST https://live-api.com/#submit`             | `POST http://localhost:3000/#submit`       | POST       |
 
 #### How This Works:
 - **Example 1:**  
