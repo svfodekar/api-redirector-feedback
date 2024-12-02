@@ -6,13 +6,13 @@ This extension helps backend developers redirect API requests from a live fronte
 ---
 
 ## How to Add a Redirect
-1. **Click on Yellow Add (+) icon**.
+1. **Click on Yellow (+) icon**.
 2. Enter the following:
    - **From URL**: The live/staging API URL you want to redirect (e.g., `https://live-api.com/api/users`).
    - **To URL**: Your local server URL (e.g., `http://localhost:3000/api/users`).
    - **Method**: Choose the HTTP method (GET, POST, etc.).
 3. Click **Add Redirect**.
-4. Use Toggle buttons to control Extension and APIs. 
+4. Use ONN/OFF Toggle buttons to control Extension and APIs. 
 5. When apis are being redirect to local server you will see blue popup message at right bottom corner.
 
 ---
