@@ -60,7 +60,7 @@ You can redirect **multiple APIs** with a single pattern.
 - **Example 2:**  
   Any URL ending with `/submit` will redirect:  
   - `POST https://live-api.com/orders/submit` → `POST http://localhost:3000/orders/submit`  
-  - `POST https://live-api.com/admin/submit` → `POST http://localhost:3000/admin/submit`  
+  - `POST https://live-api.com/admin/selling/submit` → `POST http://localhost:3000/admin/selling/submit`  
 
 ---
 
