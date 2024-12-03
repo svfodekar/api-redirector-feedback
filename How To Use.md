@@ -1,6 +1,6 @@
 # 🌟 Redirect to Local Server Chrome Extension 🌟  
 
-This extension helps backend developers redirect API requests from a live frontend to their **local development server**. Debugging and testing frontend features with a local backend has never been easier! 🚀  
+This extension empowers backend developers to seamlessly redirect API requests from a live frontend to their local backend development server. It simplifies debugging and testing frontend/backend features with a local backend, making the development process faster and more efficient! 🚀  
 
 ---
 
@@ -43,7 +43,7 @@ Redirects with placeholders let you dynamically match and replace parts of the U
 
 ---
 
-### Example 3: Redirect Groups of APIs with Patterns  
+### Example 3: Redirect Multiple APIs with Patterns  
 You can redirect **multiple APIs** with a single pattern.  
 
 | **Live URL (From)**              | **Local URL (To)**               | **Method** |
