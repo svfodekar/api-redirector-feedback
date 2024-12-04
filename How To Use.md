@@ -5,6 +5,13 @@ This is a powerful Chrome extension designed to simplify the workflow for develo
 With this extension, developers can bypass the need for tools like Postman and Insomnia to test and debug API requests. Instead, you can test, debug, and integrate local backend server directly within your browser while maintaining the full functionality of a live frontend. 🚀  
 
 ---
+## 🎯 Key Features:
+1. Seamlessly connect your live frontend to a local server for real-time API testing.
+2. Eliminate the need for tools like Postman or Insomnia by directly handling API requests in your browser.
+3. Use placeholders (#) to dynamically support paths and query parameters for flexible redirection.
+4. Redirect a group of APIs with a single placeholder (#) for easier management.
+5. Control which APIs and features are active with simple ON/OFF buttons for the extension.
+---
 
 ## 🎯 How to Add a Redirect  
 1. **Click on the Yellow (+) icon**.  
