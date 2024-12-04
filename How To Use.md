@@ -1,6 +1,8 @@
 # 🌟 Redirect to Local Server Chrome Extension 🌟  
 
-This extension empowers backend developers to seamlessly redirect API requests from a live frontend to their local backend development server. It simplifies debugging and testing frontend/backend features with a local backend, making the development process faster and more efficient! 🚀  
+This is a powerful Chrome extension designed to simplify the workflow for developers working with live frontend applications and local backend servers. By enabling seamless redirection of API requests from the live frontend to your local server.
+
+With this extension, developers can bypass the need for tools like Postman and Insomnia to test and debug API requests. Instead, you can test, debug, and integrate local backend server directly within your browser while maintaining the full functionality of a live frontend. 🚀  
 
 ---
 
