@@ -16,7 +16,7 @@ With this extension, developers can bypass the need for tools like Postman and I
 ## 🎯 How to Add a Redirect  
 1. **Click on the Yellow (+) icon**.  
 2. Enter the following details:  
-   - **From URL**: The live/staging API URL (e.g., `https://live-api.com/api/users`).  
+   - **From URL**: The live/staging API URL (e.g., `https://live-server-api.com/api/users`).  
    - **To URL**: Your local server URL (e.g., `http://localhost:3000/api/users`).  
    - **Method**: Choose the HTTP method (GET, POST, etc.).  
 3. Click **Add Redirect**.  
@@ -28,12 +28,12 @@ With this extension, developers can bypass the need for tools like Postman and I
 ## 📚 Examples: Redirecting Requests  
 
 ### Example 1: Basic Redirects  
-| **Live URL (From)**                    | **Local URL (To)**                        | **Method** |
+| **From URL**                    | **To URL**                        | **Method** |
 |----------------------------------------|-------------------------------------------|------------|
-| `GET https://live-api.com/api/add`     | `GET http://some-other-server/api2/add`   | GET        |
-| `GET https://live-api.com/api/users`   | `GET https://localhost:3000/api/users`    | GET        |
-| `PUT https://live-api.com/api/update`  | `PUT http://localhost:5000/api/update`   | PUT        |
-| `DELETE https://live-api.com/api/remove` | `DELETE http://localhost:3000/api/remove` | DELETE     |
+| `https://live-server-api.com/api/add`     | `http://some-other-server/api2/add2`   | GET        |
+| `https://live-server-api.com/api/users`   | `https://localhost:3000/api/users`    | GET        |
+| `https://live-server-api.com/api/update`  | `http://localhost:5000/api/update`   | PUT        |
+| `https://live-server-api.com/api/remove` | `http://localhost:3000/api/remove` | DELETE     |
 
 ---
 
@@ -42,12 +42,11 @@ Redirects with placeholders let you dynamically match and replace parts of the U
 
 | **Live URL (From)**                       | **Local URL (To)**                     | **Method** |
 |-------------------------------------------|----------------------------------------|------------|
-| `GET https://live-api.com/api/user/#/profile` | `GET http://localhost:3000/api/user/#/profile` | GET    |
-| `DELETE https://live-api.com/api/item?id=#` | `DELETE http://localhost:3000/api/item?id=#` | DELETE   |
+| `https://live-server-api.com/api/user/#/profile` | `http://localhost:3000/api/user/#/profile` | GET    |
+| `https://live-server-api.com/api/item?id=#` | `http://localhost:3000/api/item?id=#` | DELETE   |
 
 #### **How This Works**  
-- **Example:**  
-  If the live URL is `GET https://live-api.com/api/user/123/profile`, the request will be redirected to `GET http://localhost:3000/api/user/123/profile`.  
+  If the live URL is `GET https://live-server-api.com/api/user/123/profile`, the request will be redirected to `GET http://localhost:3000/api/user/123/profile`.  
 - The `#` symbol acts as a **placeholder** for dynamic values (e.g., Path and Query Parameters).  
 
 ---
@@ -55,21 +54,22 @@ Redirects with placeholders let you dynamically match and replace parts of the U
 ### Example 3: Redirect Multiple APIs with Patterns  
 You can redirect **multiple APIs** with a single pattern.  
 
-| **Live URL (From)**              | **Local URL (To)**               | **Method** |
+| **From URL**              | **To URL**               | **Method** |
 |----------------------------------|----------------------------------|------------|
-| `GET https://live-api.com/api/#` | `GET http://localhost:3000/api/#`| GET        |
-| `POST https://live-api.com/#submit` | `POST http://localhost:3000/#submit` | POST    |
+| `https://live-server-api.com/api/#` | `http://localhost:3000/api/#`| GET        |
+| `https://live-server-api.com/#submit` | `http://localhost:3000/#submit` | POST    |
 
 #### **How This Works**  
 - **Example 1:**  
-  Any URL starting with `https://live-api.com/api/` will redirect to `http://localhost:3000/api/`.  
-  - `GET https://live-api.com/api/orders` → `GET http://localhost:3000/api/orders`  
-  - `GET https://live-api.com/api/products/123` → `GET http://localhost:3000/api/products/123`  
+  Any URL starting with `https://live-server-api.com/api/` will redirect to `http://localhost:3000/api/`.  
+  - `GET https://live-server-api.com/api/orders` → `GET http://localhost:3000/api/orders`  
+  - `GET https://live-server-api.com/api/products/123` → `GET http://localhost:3000/api/products/123`  
 
 - **Example 2:**  
   Any URL ending with `/submit` will redirect:  
-  - `POST https://live-api.com/orders/submit` → `POST http://localhost:3000/orders/submit`  
-  - `POST https://live-api.com/admin/selling/submit` → `POST http://localhost:3000/admin/selling/submit`  
+  - `POST https://live-server-api.com/orders/submit` → `POST http://localhost:3000/orders/submit`  
+  - `POST https://live-server-api.com/admin/selling/submit` → `POST http://localhost:3000/admin/selling/submit`
+  - `POST https://live-server-api.com/admin/projectsubmit` → `POST http://localhost:3000/admin/projectsubmit` 
 
 ---
 
