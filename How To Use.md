@@ -1,4 +1,4 @@
-# 🔌 Redirect to Local Server Chrome Extension 🕹️ 
+# Redirect to Local Server Chrome Extension
 
 This is a powerful Chrome extension designed to simplify the workflow for developers working with live frontend applications and local backend servers. By enabling seamless redirection of API requests from the live frontend to your local server.
 
@@ -17,7 +17,7 @@ With this extension, developers can bypass the need for tools like Postman and I
 ## 🏄🏻‍♂️ How to Add APIs  
 1. **Click on the Yellow (+) icon**.  
 2. Enter the following details:  
-   - **From URL**: The live/staging API URL (e.g., `https://live-server-api.com/api/users`).  
+   - **From URL**: The live/staging API URL (e.g., `https://example.com/api/users`).  
    - **To URL**: Your local server URL (e.g., `http://localhost:3000/api/users`).  
    - **Method**: Choose the HTTP method (GET, POST, etc.).  
 3. Click **Add Redirect**.  
@@ -31,20 +31,20 @@ With this extension, developers can bypass the need for tools like Postman and I
 ### Example 1: Basic Redirects  
 | **From URL**                    | **To URL**                        | **Method** |
 |----------------------------------------|-------------------------------------------|------------|
-| `https://live-server-api.com/api/add`     | `http://some-other-server/api2/add2`   | GET        |
-| `https://live-server-api.com/api/users`   | `https://localhost:3000/api/users`    | GET        |
-| `https://live-server-api.com/api/update`  | `http://localhost:5000/api/update`   | PUT        |
-| `https://live-server-api.com/api/remove` | `http://localhost:3000/api/remove` | DELETE     |
+| `https://example.com/api/add`     | `http://some-other-server/api2/add2`   | GET        |
+| `https://example.com/api/users`   | `https://localhost:3000/api/users`    | GET        |
+| `https://example.com/api/update`  | `http://localhost:5000/api/update`   | PUT        |
+| `https://example.com/api/remove` | `http://localhost:3000/api/remove` | DELETE     |
 
 ---
 
 ### Example 2: Handling Dynamic Path and Query Parameters with Placeholders (`#`)  
-| **Live URL (From)**                       | **Local URL (To)**                     | **Method** |
+| **From URL (From)**                       | **To URL (To)**                     | **Method** |
 |-------------------------------------------|----------------------------------------|------------|
-| `https://live-server-api.com/api/user/#/profile` | `http://localhost:3000/api/user/#/profile` | GET    |
-| `https://live-server-api.com/api/item?id=#` | `http://localhost:3000/api/item?id=#` | DELETE   |
+| `https://example.com/api/user/#/profile` | `http://localhost:3000/api/user/#/profile` | GET    |
+| `https://example.com/api/item?id=#` | `http://localhost:3000/api/item?id=#` | DELETE   |
 #### **How This Works**  
-  If the live URL is `GET https://live-server-api.com/api/user/123/profile`, the request will be redirected to `GET http://localhost:3000/api/user/123/profile`.  
+  If the live URL is `GET https://example.com/api/user/123/profile`, the request will be redirected to `GET http://localhost:3000/api/user/123/profile`.  
 - The `#` symbol acts as a **placeholder** for dynamic values (e.g., Path and Query Parameters).  
 
 ---
@@ -52,18 +52,18 @@ With this extension, developers can bypass the need for tools like Postman and I
 ### Example 3: Redirect Multiple APIs with Patterns  
 | **From URL**              | **To URL**               | **Method** |
 |----------------------------------|----------------------------------|------------|
-| `https://live-server-api.com/api/#` | `http://localhost:3000/api/#`| GET        |
-| `https://live-server-api.com/#submit` | `http://localhost:3000/#submit` | POST    |
+| `https://example.com/api/#` | `http://localhost:3000/api/#`| GET        |
+| `https://example.com/#submit` | `http://localhost:3000/#submit` | POST    |
 #### **How This Works**  
 - **Example 1:**  
-  Any URL starting with `https://live-server-api.com/api/` will redirect to `http://localhost:3000/api/`.  
-  - `GET https://live-server-api.com/api/orders` → `GET http://localhost:3000/api/orders`  
-  - `GET https://live-server-api.com/api/products/123` → `GET http://localhost:3000/api/products/123`  
+  Any URL starting with `https://example.com/api/` will redirect to `http://localhost:3000/api/`.  
+  - `GET https://example.com/api/orders` → `GET http://localhost:3000/api/orders`  
+  - `GET https://example.com/api/products/123` → `GET http://localhost:3000/api/products/123`  
 - **Example 2:**  
   Any URL ending with `/submit` will redirect:  
-  - `POST https://live-server-api.com/orders/submit` → `POST http://localhost:3000/orders/submit`  
-  - `POST https://live-server-api.com/admin/selling/submit` → `POST http://localhost:3000/admin/selling/submit`
-  - `POST https://live-server-api.com/admin/projectsubmit` → `POST http://localhost:3000/admin/projectsubmit` 
+  - `POST https://example.com/orders/submit` → `POST http://localhost:3000/orders/submit`  
+  - `POST https://example.com/admin/selling/submit` → `POST http://localhost:3000/admin/selling/submit`
+  - `POST https://example.com/admin/projectsubmit` → `POST http://localhost:3000/admin/projectsubmit` 
 
 ---
 
